@@ -1,0 +1,243 @@
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+#test {
+  color: maroon;
+}
+
+#hexvalue {
+  color: #123456;
+}
+
+#hexvalue2 {
+  color: #8c3d1c;
+}
+
+#rgba {
+  color: rgba(50, 100, 34, 0.5);
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.font-styles1 {
+  font-family: verdana;
+}
+
+.font-styles2 {
+  font-family: helvetica;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.font-size {
+  font-size: 20px;
+}
+
+.multiplestyles {
+  font-family: helvetica;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.lineheight {
+  line-height: 4;
+}
+
+.letterspacing {
+  letter-spacing: 4px;
+}
+
+.wordspacing {
+  word-spacing: 20px;
+}
+
+.ul1 {
+  list-style-type: square;
+}
+
+.ul2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.box-model {
+  border: 1px solid red;
+  height: 50px;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.cascade {
+  color: blue;
+}
+
+.inheritance {
+  color: orange;
+  font-family: arial;
+  font-style: italic;
+  font-size: 20px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+
+td {
+  text-align: center;
+}
+
+.content-1 {
+  border: 1px solid red;
+  display: inline;
+}
+
+.content-2 {
+  border: 1px solid blue;
+  display: block;
+}
+
+.content-3 {
+  display: none;
+}
+
+.position-1 {
+  border: 1px solid red;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.position-2 {
+  border: 1px solid blue;
+  position: static;
+}
+
+.position-3 {
+  border: 1px solid red;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.position-4 {
+  border: 1px solid red;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+.position-5 {
+  border: 1px solid red;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.position-6 {
+  border: 1px solid red;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 500px;
+  border: 1px solid black;
+}
+
+.position-7 {
+  border: 1px solid red;
+  position: sticky;
+  top: 50px;
+  left: 50px;
+}
+
+.em-container {
+  font-size: 20px;
+  height: 2em;
+}
+
+.em-child {
+  font-size: 3em;
+}
+
+.rem1 {
+  font-size: 2rem;
+}
+
+.rem2 {
+  font-size: 3rem;
+}
+
+.vh {
+  font-size: 2rem;
+  height: 50vh;
+  border: 1px solid #333;
+}
+
+.vw {
+  font-size: 2rem;
+  height: 50vh;
+  width: 50vw;
+  border: 1px solid #333;
+}
+
+.math-function {
+  font-size: 2rem;
+  height: calc(50vh-100px)
+  border: 1px solid #333;
+}
+
+.max-function {
+  font-size: 2rem;
+  height: max(50vh, 600px);
+  border: 1px solid #333;
+}
+
+.min-function {
+  font-size: 2rem;
+  height: min(50vh, 600px);
+  border: 1px solid #333;
+}

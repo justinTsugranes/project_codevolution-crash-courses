@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/flexbox-crash-course/flexbox.css" />
+    <title>Flexbox Crash Course</title>
+  </head>
+  <body>
+    <h1>CSS Flexbox Crash Course</h1>
+
+    <p>
+      The contents of this course are derived from the CSS Flexbox Crash Course
+      located on
+      <a
+        href="https://www.youtube.com/watch?v=z62f2k38s64&list=PLC3y8-rFHvwhuX4qGvFx-wPy_MEi6Jdp7&index=3"
+        target="_blank"
+        >The Codevolution YouTube Page.</a
+      >
+    </p>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/z62f2k38s64"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <p>
+      While this is not a completely exhaustive list, what follows is an
+      extensive list of topics to get beginners going. I found a lot of value in
+      the crash courses when I was first beginning to code and took extensive
+      notes as I followed along. So, in coder fashion, I made websites out of
+      the content and deployed them through
+      <a href="https://app.netlify.com/" target="_blank">Netlify</a>
+    </p>
+
+    <p>
+      You can find the GitHub Repo with all of the code
+      <a
+        href="https://github.com/justinTsugranes/flexbox-crash-course"
+        target="_blank"
+        >Here.</a
+      >
+      The test.html file is a pre-setup html file that is used throughout the
+      course to demonstrate the topics included in the course.
+    </p>
+
+    <p>
+      To access the testing site, click
+      <a href="/flexbox-crash-course/flexbox-test.html">Here.</a> For an
+      interactive version, visit the GitHub repo via the link above and clone
+      the Repo to your local machine while you follow along the course videos.
+    </p>
+
+    <hr />
+
+    <h2>What is Flexbox</h2>
+
+    <p>
+      The CSS Flexible Box Module or simply known as Flexbox is a
+      one-dimensional layout model
+    </p>
+
+    <p>
+      It allows you to design felixble and efficient layouts, align and
+      distribute space among items in a container
+    </p>
+
+    <p>Flexbox helps you arrange elements in a webpage with ease.</p>
+
+    <p>
+      Flexbox provides a lot of flexibility to arrange items, adjust spacing,
+      adjsut alignment, and adjust the order of items.
+    </p>
+
+    <p>Before flexbox, there were four layout modes.</p>
+
+    <ol>
+      <li>Block, for sections in a webpage</li>
+      <li>Inline, for text</li>
+      <li>Table, for two-dimensional table data</li>
+      <li>Positioned, for explicit position of an element</li>
+    </ol>
+
+    <h2>Terminology</h2>
+
+    <p>
+      When we talk about flexbox, we mainly have two entities, a parent
+      container, which we refer to as flex-container and the immediately
+      children, which we refer to as flex-elements. Flex items are contained
+      within the flex container.
+    </p>
+
+    <img
+      src="/flexbox-crash-course/images/flexbox-container-and-items.jpg"
+      height="300px"
+      width="600px"
+      alt="flexbox containers and items"
+    />
+
+    <h2>Flex Axes</h2>
+
+    <img
+      src="/flexbox-crash-course/images/flexbox-axes.jpg"
+      height="350px"
+      width="600px"
+      alt="flexbox axes"
+    />
+
+    <p>You deal with two axes with flexbox:</p>
+
+    <ol>
+      <li>
+        <p>Main Axis</p>
+        <ul>
+          <li>
+            <p>Runs left to right by default</p>
+            <ul>
+              <li>The startpoint of the main axis is termed Main Start</li>
+              <li>The endpoint of the main axis is termed Main End</li>
+              <li>
+                The length from main start to main end is called the Main Size.
+              </li>
+              <li>
+                <p>
+                  Flex items flow from main start to main end and take up the
+                  main size as the length
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Cross Axis</p>
+        <ul>
+          <li>
+            Runs top to bottom by default
+            <ul>
+              <li>The startpoint of the main axis is termed Cross Start</li>
+              <li>The endpoint of the main axis is termed Cross End</li>
+              <li>
+                The length from main start to main end is called the Cross Size.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <p>
+      You can change the direction of the main and cross axes by changing how
+      the items are laid out in the container.
+    </p>
+
+    <h2>Flex Container Properties</h2>
+
+    <p>There are ten total flex container properties</p>
+
+    <ol>
+      <li>
+        Display - this is what defines a flex container and is mandatory in
+        order to work with flexbox.
+      </li>
+      <li>
+        flex-direction - it defines the direction in which the flex items are
+        placed within the container
+      </li>
+      <li>
+        flex-wrap - used to control the wrapping of items within the container
+      </li>
+      <li>
+        flex-flow - shorthand for the combination of flex-direction and
+        flex-wrap
+      </li>
+      <li>column-gap - sets the gap between columns</li>
+      <li>row-gap - sets the gap between rows</li>
+      <li>gap - shorthand for setting gap between column and rows</li>
+      <li>
+        justify-content - defines the alignment of the items along the main axis
+      </li>
+      <li>
+        align-items - defines how flex-items are laid out along the cross axis
+      </li>
+      <li>
+        align-content - similar to justify-content, but this will align along
+        the cross axis and not the main axis. This works ony when there are
+        multiple flex rows within the container.
+      </li>
+    </ol>
+
+    <hr />
+
+    <h3>display</h3>
+
+    <p>
+      Display creates either a block level or and inline container. The possible
+      values are &#39;display: flex&#39; or &#39;display: inline-flex&#39;
+    </p>
+
+    <p>On the container class, we set the display: flex;</p>
+
+    <p>
+      As with all properties with CSS, some initial values are defined. When
+      creating a flex container, all of the contained flex items behave in a
+      certain way.
+    </p>
+
+    <p>First, they will display in a row.</p>
+
+    <p>
+      Second, items start from the beginning of the left axis, the left most
+      axis, but do not stretch to the end. However, they can shrink to a certain
+      extent
+    </p>
+
+    <p>
+      Third, items will stretch to fill the cross axis, from the top to the
+      bottom.
+    </p>
+
+    <p>
+      Also, from the border, the container itself has 100% width, so it does
+      behave similar to a block level element. If you do not want a block level
+      flex container, you can set the flex proeprty to inline-flex and create an
+      inline flex container.
+    </p>
+
+    <p>
+      After setting the property to inline-flex, the border wraps around the
+      container instead of filling the full width to accomodate its children.
+    </p>
+
+    <h3>flex-direction</h3>
+
+    <p>
+      Flex Direction establsihes the main axis, which in turn decides how the
+      flex items are placed within the container.
+    </p>
+
+    <p>
+      By default, the main access flows from left to right, which is the reason
+      why the initial items are placed from left to right in the browser.
+    </p>
+
+    <p>
+      By changing the direction of the flex property, we can change the order of
+      the flex items displayed
+    </p>
+
+    <p>There are four possible values for flex-direction:</p>
+
+    <ol>
+      <li>
+        flex-direction: row; - This is the default value. Items flow from left
+        to right
+      </li>
+      <li>
+        flex-direction: row-reverse; - Sets the row items in a row, reversed.
+      </li>
+      <li>
+        flex-direction: column; - Sets the main access from top to bottom. The
+        items will be stacked on top of each other.
+      </li>
+      <li>
+        flex-direction: column-reverse - stacks items in a column in the reverse
+        order.
+      </li>
+    </ol>
+
+    <h3>flex-wrap</h3>
+
+    <p>There are three possible valus for flex-wrap</p>
+
+    <ol>
+      <li>flex-wrap: nowrap; - This is the default value.</li>
+      <li>
+        flex-wrap: wrap; - The values of the container will wrap/unwrap as you
+        decrease/increase the viewport size. Wrapping takes place only when
+        needed.
+      </li>
+      <li>
+        flex-wrap: wrap-reverse; - Instead of items falling into the row below,
+        they climb from the end up into the row above.
+      </li>
+    </ol>
+
+    <p>
+      Vertical wrapping of items is also possible. For that, we need to change
+      flex-direction to column and add a height to the flex container.
+    </p>
+
+    <h3>flex-flow</h3>
+
+    <p>
+      Flex flow is a short hand for both flex-direction and flex-wrap. The first
+      value is the flex-direction and the second direction is the flex-wrap.
+    </p>
+
+    <p>ie. flex-flow: &#39;flex-direction&#39;&#39;flex-wrap&#39;;</p>
+
+    <p>
+      By default, the flex-flow is set to row and nowrap, which are the default
+      values of each of the indvidual properties.
+    </p>
+
+    <p>
+      You can type any possible combination of the direction and wrap values and
+      the container will adjust.
+    </p>
+
+    <h3>column-gap</h3>
+
+    <p>Sets the gap between columns.</p>
+
+    <p>Values can be a non-negative value or a percentage.</p>
+
+    <p>ex. column-gap: 20px;</p>
+
+    <p>gives a gap of 20px to the columns.</p>
+
+    <h3>row-gap</h3>
+
+    <p>Sets the gap between rows.</p>
+
+    <p>Values can be a non-negative value or a percentage.</p>
+
+    <p>ex. row-gap: 20px;</p>
+
+    <p>gives a gap of 20px to the rows.</p>
+
+    <h3>gap</h3>
+
+    <p>
+      Gap is shorthad for row-gap and column-gap. The first value is row-gap and
+      the second value is column-gap.
+    </p>
+
+    <p>ie. gap: &#39;row-gap&#39;&#39;column-gap&#39;</p>
+
+    <p>Values can be a non-negative value or a percentage.</p>
+
+    <p>
+      You can type any possible combination of the row and column gap values and
+      the container will adjust.
+    </p>
+
+    <h2>Aligment-Based Properties</h2>
+
+    <h3>justify-content</h3>
+
+    <p>
+      Defines the content along the main axis. Used to align items and
+      distribute any extra spacing in the parent container.
+    </p>
+
+    <p>Possible Values:</p>
+
+    <ol>
+      <li>
+        justify-content: flex-start; - By default, justify-content is set to the
+        value flex-start, which places the flex items at the beginning of the
+        main axis, which is also knonw as &#39;main start&#39;.
+      </li>
+      <li>
+        justify-content: flex-end; - Causes the flex items to be placed at the
+        end of the main axis, which is also known as &#39;main end&#39;
+      </li>
+      <li>
+        justify-content: center; - Causes the flex items to be placed at the
+        cneter of the main axis.
+      </li>
+      <li>
+        justify-content: space-between; - evenly distributes the extra space
+        within the container between the flex items.
+      </li>
+      <li>
+        justify-content: space-around; - evenly distributes the extra space
+        within the container between the flex items and gives a space that is
+        half of the space that&#39;s between the items to the start and end.
+      </li>
+      <li>
+        justify-content: space-evenly; - even distributes the extra space within
+        the container between the flex items and gives equal space to the start
+        and end.
+      </li>
+    </ol>
+
+    <h3>align-items</h3>
+
+    <p>
+      Align Items defines the default behavior for how flex items are laid out
+      across the cross axis of the container. It works just like
+      justify-content, but in the perpendicular position.
+    </p>
+
+    <p>To visualize the changes, you need a height on the container.</p>
+
+    <p>Possible Values:</p>
+
+    <ol>
+      <li>
+        align-items: stretch; - By default, the value of align-items is stretch.
+        This means that items stretch the entire length of the cross axis.
+      </li>
+      <li>
+        align-items: flex-start; - All items will be pushed to the cross start,
+        which is the starting point of the cross axis.
+      </li>
+      <li>
+        align-itens: flex-end; - All items will be pushed to the botto of the
+        container, which is the cross end, the ending point of the cross axis.
+      </li>
+      <li>
+        align-items: center; - Places the items at the center of the cross axis.
+      </li>
+      <li>align-items: baseline; - The baseline upon which content sits.</li>
+    </ol>
+
+    <img
+      src="/flexbox-crash-course/images/baseline.jpg"
+      alt="baseline"
+      height="350px"
+      width="600px"
+    />
+
+    <h3>align-content</h3>
+
+    <p>
+      The align content propety aligns lines of content along the cross axis,
+      similar to how justify-content justifies content along the main axis.
+    </p>
+
+    <p>
+      A very important condition is that multiple lines or rows must exist
+      within the container, otherwise the property doesn&#39;t have any effect.
+    </p>
+
+    <p>
+      First, make sure to have a height on the container and also enable
+      wrapping of items.
+    </p>
+
+    <p>Possible Values:</p>
+
+    <ol>
+      <li>
+        align-content: stretch; - By default, the value of align-content is
+        stretch.
+      </li>
+      <li>
+        align-content: flex-start; - This pulls the rows to the beginning of the
+        cross axis.
+      </li>
+      <li>
+        align-content: flex-end; - Pushes the content to the end of the cross
+        axis.
+      </li>
+      <li>align-content: center; - Center aligns the content</li>
+      <li>
+        align-content: space-between: - Distributes vertical space between rows
+      </li>
+      <li>
+        align-content: space-around: - distributes the space around the lines.
+        The center portion has twice the amount of space as the top and bottom
+        edges.
+      </li>
+    </ol>
+
+    <h2>Flex Item Properties</h2>
+
+    <ol>
+      <li>
+        order - controls the order in which the items appear in the flex
+        container
+      </li>
+      <li>
+        flex-grow - defines the ability for a flex item to grow if necessary
+      </li>
+      <li>
+        flex-shrink - defines the ability for a flex item to shrink if necessary
+      </li>
+      <li>flex-basis - specififes the initial main size of a flex item</li>
+      <li>flex - shorthand for flex-grow, flex-shrink and flex-basis</li>
+      <li>align-align</li>
+    </ol>
+
+    <h3>order</h3>
+
+    <p>
+      Order is an integer value used to determine the order in which items
+      appear.
+    </p>
+
+    <p>
+      By default, the order of all flex items is 0. You can change the order in
+      which items appear on screen by using &#39;order: number&#39;, ie.
+      &#39;order: 1&#39;, &#39;order: 2&#39;, etc.
+    </p>
+
+    <p>
+      If you specify the same order number for two or more items, the items will
+      appear in the order in which they appear in the source code.
+    </p>
+
+    <h3>flex-grow</h3>
+
+    <p>
+      Flex-grow specificies what amount of space inside a container the item
+      should take up if necessary. It is always relative to the other children
+      within the flex container.
+    </p>
+
+    <p>
+      By default, all flex iems have a value of 0 and only take up the amount of
+      space required to fit the content.
+    </p>
+
+    <p>
+      ex. &#39;flex-grow: 0;&#39;, &#39;flex-grow: 1;&#39;. &#39;flex-grow:
+      3;&#39; etc.
+    </p>
+
+    <p>
+      If you want all of te items to grow to take up the extra space evenly, you
+      simply add flex-grow: 1 for all items.
+    </p>
+
+    <h3>flex-shrink</h3>
+
+    <p>
+      Flex shrink defines the ability for a flex item t shrink if necessary.
+    </p>
+
+    <p>
+      Unlike flex-grow, the default value for flex-shrink is 1 on every item.
+    </p>
+
+    <h3>flex-basis</h3>
+
+    <p>
+      Specificies the inital size of a flex item before the extra space in the
+      container is distributed. This is used in place of the width property in
+      flex layouts.
+    </p>
+
+    <p>
+      It can accept values such as: pixels, percentages, values, rem, or even
+      keywords like auto.
+    </p>
+
+    <p>By default, flex-basis has a value of auto.</p>
+
+    <p>flex-grow and flex-shrink apply on top of flex-basis.</p>
+
+    <p>
+      For example, if you set flex-grow: 1 on item 1, the extra space is added
+      on top of the 200 px.
+    </p>
+
+    <p>
+      Flex-box doesn&#39;t try to decrease its growth just because it is larger
+      than the other items to begin with.
+    </p>
+
+    <h3>flex</h3>
+
+    <p>Flex is shorthand for flex-grow, flex-shrink, and flex-basis.</p>
+
+    <p>
+      Although you can designate grow, shrink and basis individually, Flex is
+      the recommended method.
+    </p>
+
+    <p>
+      By default, flex has a value of &#39;flex: 0 1 auto;&#39;, meaning the
+      items will no grow to fit the container, the items will shrink if
+      necessary, and that the width of the items depends on the content.
+    </p>
+
+    <p>
+      The flex property can be specified using one, two or three of the values.
+    </p>
+
+    <p>ie. .item{ flex-grow: 2; flex-shrink: 5; flex-basis: 200; }</p>
+
+    <p>You can shorthand the above by using:</p>
+
+    <p>.item { flex: 2 5 200px; }</p>
+
+    <p>Other examples:</p>
+
+    <p>
+      flex: 2; flex: 10em; flex: 30px; flex: 1 30px; flex: 2 2; flex: 2 2 10%;
+      etc...
+    </p>
+
+    <h3>align-self</h3>
+
+    <p>Used to control the alignment of individual items.</p>
+
+    <p>The default value for align-self is auto.</p>
+
+    <p>
+      Align-self is computed off of the align-items property of the parent
+      container. align-self overides the align-items value fo the flex
+      container.
+    </p>
+
+    <p>The values are pretty much the same as the values for align-items.</p>
+
+    <p>
+      align-self: flex-start; - the item will be pushed to the beginning of the
+      cross axis align-self: flex-end; - the item will be pushed to the end of
+      the cross axis align-self: center; - the item will be centered within the
+      cross axis. align-self: stretch; - The item will be stretch across the
+      cross axis.
+    </p>
+  </body>
+</html>

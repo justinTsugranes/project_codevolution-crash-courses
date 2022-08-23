@@ -1,0 +1,83 @@
+body {
+  margin: 20px;
+}
+
+.container {
+  border: 6px solid black;
+  display: grid;
+  // height: 800px;
+  // grid-template-columns: 100px 200px 300px;
+  //grid-template-columns: 200px 200px 200px;
+  // grid-template-columns: repeat(3, 200px);
+  // grid-template-columns: 1fr 2fr 1fr;
+  // grid-template-columns: repeat(3, minmax(200px, 1fr));
+  // grid-template-rows: 100px 150px 200px;
+  // grid-template-rows: repeat(3, 100px) 200px;
+  // grid-template-rows: repeat(3, 1fr);
+  // The example below is a shorthand for two of the above statements and is separated by a forward slash.
+  // grid-template: repeat(3, 1fr) / repeat(3, minmax(200px, 1fr));
+  // grid-template: repeat(3, 200px) / repeat(3, 200px);
+  // column-gap: 20px;
+  // row-gap: 20px;
+  // gap: 20px 20px;
+  // justify-items: center;
+  // align-items: center;
+  // place-items: center;
+  // justify-content: space-evenly;
+  // align-content: space-evenly;
+  // place-content: start end;
+  // place-content: center;
+  // grid-auto-flow: column;
+  // grid-auto-columns: 100px;
+  //grid-auto-rows: 100px;
+}
+
+.grid-item {
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.item-1 {
+  background-color: #b4bf35;
+  // grid-column-start: 1;
+  // grid-column-end: 3;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.item-2 {
+  background-color: #b95f21;
+  // justify-self: center;
+  // align-self: center;
+  place-self: ;
+}
+
+.item-3 {
+  background-color: #1c4c56;
+}
+
+.item-4 {
+  background-color: #cfb276;
+}
+
+.item-5 {
+  background-color: #6b0803;
+}
+
+.item-6 {
+  background-color: #1c4c56;
+}
+
+.item-7 {
+  background-color: #b95f21;
+}
+
+.item-8 {
+  background-color: #01243a;
+}
+
+.item-9 {
+  background-color: #aad041;
+}

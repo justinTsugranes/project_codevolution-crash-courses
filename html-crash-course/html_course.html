@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Crash Course</title>
+    <meta name="author" content="JustinTsugranes"/>
+    <meta name="description" content="This webpage aims to provide complete beginners information about HTML fundamentals"/>
+  </head>
+  <body>
+    <div>
+    <h1>HTML Crash Course</h1>
+
+    <p>The contents of this course are derived from the HTML Crash Course located on <a href="https://www.youtube.com/watch?v=N8YMl4Ezp4g&list=PLC3y8-rFHvwhuX4qGvFx-wPy_MEi6Jdp7&index=1" target="_blank">The Codevolution YouTube Page.</a></p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/N8YMl4Ezp4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <p>While this is not a completely exhaustive list, what follows is an extensive list of topics to get beginners going. I found a lot of value in the crash courses when I was first beginning to code and took extensive notes as I followed along. So, in coder fashion, I made websites out of the content and depoyed them through <a href="https://app.netlify.com/" target="_blank">Netlify</a></p>
+
+    <p>You can find the GitHub Repo with all of the code <a href="https://github.com/justinTsugranes/html-crash-course" target="_blank">Here</a></p>
+    </div>
+
+    <hr>
+
+    <h4>The Head Tag</h4>
+      <p>Head tags are used to describe the content of the page. The page title, metadata, and character encoding all go in the head tag. UTF-8 is the global standard now for head tags, which enables your page to handle any language now. You can also include author and content meta. Example meta is located at the top of this document.</p>
+
+    <hr>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <p>This is a paragraph</p>
+    <p>Paragraphs always begin on a new line.</p>
+    <p>To place the Lorem Ipsum placeholder, type 'Lorem' and then press Tab</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quasi nam
+      iusto, nihil, vitae maiores sequi rem, saepe possimus deserunt libero
+      veniam voluptatum architecto quia in nulla? Ipsa, illum accusantium.
+    </p>
+    <p>To intentionally create a new line, use the in-line break tag</b></p>
+    <p> A 'horizontal' can be placed using hr.</p>
+    <hr/>
+    <p> Here is a strong tag <strong>Lorem</strong>.</p>
+    <p>Here is an emphasis tag. <em>Lorem</em></p>
+    <p>Here is a <small>small tag</small></p>
+    <p>The mark tag is used to <mark>highlight text</mark></p>
+    <p>To indicate a strike-thruugh, used the <del>delete tag</del></p>
+    <p>To underline, use the <ins>ins tag</ins></p>
+    <p>We use <sub>sub</sub> for subscripts</p>
+    <p>And we use <sup>sup</sup> for superscripts</p>
+    <div>
+    <p>the div tag is a block level element.</p>
+    </div>
+    <div>
+    <p>anything wrapped in a div moves to a new line and takes up the entire line </p>
+    </div>
+    <p>the <span>span element</span> is an in-line element and <span>only takes up the necessary width.</span></p>
+
+    <hr>
+    <h4>Lists</h4>
+    <p4>HTML provides three different types of lists</p4>
+    <ul>
+      <li>Unordered lists are used</li>
+      <li>when the order of the contents</li>
+      <li>doesn't matter</li>
+    </ul>
+
+    <ol>
+      <li>Ordered lists are used</li>
+      <li>when the order of the contents</li>
+      <li>DOES matter</li>
+    </ol>
+
+    <dl>
+      <dt>Description lists</dt>
+      <dd>are a list of terms with a description for each term</dd>
+      <dt>Ice Cream</dt>
+      <dd>A soft, sweet frozen food</dd>
+      <dt>Coffee</dt>
+      <dd>Is a hot beverage</dd>
+    </dl>
+
+    <hr>
+    <h4>HTML Attributes</h4>
+
+    <p> This img attrbute is used to import images. The format is img src=""</p>
+    <p>You can define the width and height for the images</p>
+    <p>alt tags are used to describe the image for times when the image isn't displayed and/or for screen readers. The image has been left out of the file in this example in order to demonstrate the Alt tag.</p>
+    <img src="logo.jpg" width="200" height="200" alt="Company Logo">
+
+    <p>The anchor tag is used to create hyperlinks to other pages</p>
+    <a href="https://google.com">Google</a>
+
+    <p>You can also link to other files within the same folder</p>
+    <p>For example, <a href="/html-crash-course/contact.html" target="_blank">this link</a> goes to the contact.html file and is embedded within the text of this paragraph.</p>
+
+    <p>Using the target tag can tell the link where to load. The most common is the target="_blank", which tells the link to load in a new page. The Contact link above opens in a new page using the target attribute.</p>
+
+    <hr>
+    <h4>Here's how you list rows and columns using the Table tag.</h4>
+    <p>You use thead for the table header, tbody for the table body, tr for table row. Table rows can have as many columns as you'd like. To specify the Heading for the column, you use the th tag. To specify data that goes in the table rows, you use the td tag for table data</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Heading 1</th>
+           <th>Heading 2</th>
+            <th>Heading 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 6</td>
+        </tr>
+        <tr>
+          <td>Data 7</td>
+          <td>Data 8</td>
+          <td>Data 9</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+    <h4>Forms</h4>
+    <p>Forms are used to collect data. Users typically enter data which is sent to a web server for processing and storage. Every for begins with a Form tag. Use the label element to display an input label. Use the input tag to accept an input. Input tags are self closing. The example below uses the 'text' type of input. A good practice for forms is to tie the label to the input using id and for tags. Below, we give the input an id of username and give the label a for tag of username. When you click on the label for the element, it will focus the cursor on the input for the element. I've added some break tags for spacing</p>
+
+    <form>
+      <label for="username">Username</label><br/>
+      <input type="text"id="username"/><br/><br/>
+       <p>For larger text areas, we use the textarea tag.</p>
+      <label for="about">About</label><br/>
+      <textarea id="about"></textarea>
+      <br><br>
+
+      <p>This is a dropdown menu. We use the select tag for dropdown menus. Options within the dropdown are created using the nested option tag. For each option, you declare the value for the option and the text for the option. The value is the information that is sent to the server.</p>
+      <label for="country">Country</label><br/>
+      <select id="country">
+        <option value="costa rica">Costa Rica</option>
+        <option value="singapore">Singapore</option>
+        <option value="spain">Spain</option>
+      </select>
+      <br><br>
+
+      <p>Radio Button groups allow the user to select one value from many options. </p>
+      <label for="jobtype">Job Type</label><br/>
+      <input type="radio" name="jobtype" value="parttime" id="parttime"/><br>
+      <label for="parttime">Part Time</label><br/>
+      <input type="radio" name="jobtype" value="fulltime" id="fulltime"/><br>
+      <label for="fulltime">Full Time</label>
+      <br><br>
+
+      <p>If you want someone to be able to select multiple options, you use checkboxes. We've changed the id's so that they are unique. parttime and fulltime ids were already used for the radio buttons above</p>
+       <label for="jobtype">Job Type</label><br/>
+      <input type="checkbox" name="jobtypecb" value="parttime" id="parttimecb"/><br>
+      <label for="parttimecb">Part Time</label><br/>
+      <input type="checkbox" name="jobtypecb" value="fulltime" id="fulltimecb"/><br>
+      <label for="fulltimecb">Full Time</label>
+      <br/><br/>
+
+      <p>To submit and send the data to a server, you create a button using the button tag. The button below doesn't send the data anywhere. </p>
+      <button>Submit</button>
+
+      </form>
+      <br>
+      <hr>
+
+      <h4>Semantic HTML</h4>
+      <p>When grouping elements or content in a webpage, it is possible to use div and span tags. However, these tags tell nothing about their content. A semantic element clearly describes their meaning in a human and machine-reable way. Semantic HTML suggests to the developer the type of data that will be populated. Semantic HTMl helps search engines to influence page search rankings. Screen readers can also use them asa signpost to help visually impaired users navigate pages.</p>
+      <p>There are roughly 100 semantic elements in HTML 5.<br>Here are some of the more popular types.</p>
+
+      <img src="/html-crash-course/images/layout.jpg" width="400" height="300">
+</html>

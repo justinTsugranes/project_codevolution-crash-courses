@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/grid-crash-course/grid.css" />
+    <title>CSS Grid Crash Course</title>
+  </head>
+  <body>
+    <h1>CSS Grid Crash Course</h1>
+
+    <p>
+      The contents of this course are derived from the CSS Grid Crash Course
+      located on
+      <a
+        href="https://www.youtube.com/watch?v=p4Ith5qRM1g&list=PLC3y8-rFHvwhuX4qGvFx-wPy_MEi6Jdp7&index=4"
+        target="_blank"
+        >The Codevolution YouTube Page.</a
+      >
+    </p>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/p4Ith5qRM1g"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <p>
+      While this is not a completely exhaustive list, what follows is an
+      extensive list of topics to get beginners going. I found a lot of value in
+      the crash courses when I was first beginning to code and took extensive
+      notes as I followed along. So, in coder fashion, I made websites out of
+      the content and deployed them through
+      <a href="https://app.netlify.com/" target="_blank">Netlify</a>
+    </p>
+
+    <p>
+      You can find the GitHub Repo with all of the code
+      <a
+        href="https://github.com/justinTsugranes/css-grid-crash-course"
+        target="_blank"
+        >Here.</a
+      >
+      The test.html file is a pre-setup html file that is used throughout the
+      course to demonstrate the topics included in the course.
+    </p>
+
+    <p>
+      To access the testing site, click
+      <a href="/grid-crash-course/grid-test.html">Here.</a> For an interactive
+      version, visit the GitHub repo via the link above and clone the Repo to
+      your local machine while you follow along the course videos.
+    </p>
+
+    <hr />
+
+    <h2>What is CSS Grid</h2>
+
+    <p>
+      The CSS Grid Layout Module, simply known as CSS Grid or just Grid, is a
+      two-dimensional grid-based layout system that is composed of 12 cells.
+    </p>
+
+    <p>
+      With rows and columns, Grid makes it easier to design web page layouts,
+      align, and distribute space among items in a grid.
+    </p>
+
+    <p>Flexbox is great for 1D layouts.</p>
+
+    <p>Grid is great for 2D layouts.</p>
+
+    <h2>Terminology</h2>
+
+    <p>
+      When you talk about CSS Grid, you are mainly talking about the parent
+      container, which we call the Grid Container and the children elements,
+      which we refer to as Grid Items.
+    </p>
+
+    <img
+      src="/grid-crash-course/images/grid-container-and-grid-items.jpg"
+      alt="grid containers and grid items"
+      height="300px"
+      width="500px"
+    />
+
+    <p>
+      A Grid Line is the horizontal or vertical dividing line in a grid. If the
+      line is vertical, it is a column grid line. If the line is horizontal, it
+      is a row grid line.
+    </p>
+
+    <p>
+      A Grid Cell is the smallest unit that you can have on a grid. It is the
+      space between four intersecting grid lines.
+    </p>
+
+    <p>
+      A Grid Track is the space between two adjacent grid lines. It is denoted
+      by the green space in the image.
+    </p>
+
+    <p>
+      The Grid Area is the total space surrounded by four grid lines. It may be
+      composed of any number of grid cells. It is denoted by the purple space in
+      the image.
+    </p>
+
+    <img
+      src="/grid-crash-course/images/grid-line-cell-track-area.jpg"
+      alt="grid containers and grid items"
+      height="300px"
+      width="550px"
+    />
+
+    <h2>Grid Container Properties</h2>
+
+    <p>There are 18 total grid container properties.</p>
+
+    <p>The 18 Grid Container Properties Are:</p>
+
+    <ol>
+      <li>display</li>
+      <li>grid-template-columns</li>
+      <li>grid-template-rows</li>
+      <li>grid-template</li>
+      <li>column-gap</li>
+      <li>row-gap</li>
+      <li>gap</li>
+      <li>justify-items</li>
+      <li>align-items</li>
+      <li>place-items</li>
+      <li>justify-content</li>
+      <li>align-content</li>
+      <li>place-content</li>
+      <li>grid-auto-columns</li>
+      <li>grid-auto-rows</li>
+      <li>grid-auto-flow</li>
+      <li>grid-template-areas</li>
+      <li>grid</li>
+    </ol>
+
+    <h3>display</h3>
+
+    <p>
+      Used to create either a block level or an inline level grid container.
+    </p>
+
+    <p>Possible Values:</p>
+
+    <ol>
+      <li>display: grid</li>
+      <li>displau: inline-grid</li>
+    </ol>
+
+    <p>
+      To create a grid container, we use a display property and set it to
+      &#39;grid&#39;. ie &#39;display: grid&#39;
+    </p>
+
+    <p>
+      By default, display: grid creates a block level element. If you do not
+      want a block level element, you can create an inline element by using
+      &#39;display: inline-grid&#39;
+    </p>
+
+    <h3>grid-template-columns</h3>
+
+    <p>Specifies the number of columns in the grid layout.</p>
+
+    <p>
+      The valuyes are a space-separated list where each value specifies the size
+      of the respective column.
+    </p>
+
+    <p>ie using. &#39;grid-template-columns: 100px 200px 300px;&#39;</p>
+
+    <p>
+      creates three columns. Columnn 1 is 100 px, column 2 is 200px, and column
+      3 is 300px;
+    </p>
+
+    <p>
+      If you want equal sized columns, simply set the desired size repeatedly.
+    </p>
+
+    <p>ie. &#39;grid-template-columns: 200px 200px 200px;&#39;</p>
+
+    <h4>repeat function</h4>
+
+    <p>
+      A better way to set a repeated size for multiple columns is the set the
+      value to repeat and then declare the amount of times to be repeated and
+      the size...
+    </p>
+
+    <p>ie. &#39;grid-template-columns: repeat(3, 200px);&#39;</p>
+
+    <p>
+      It is also possible to set the width of the column as a fraction of the
+      available space in the container by using &#39;fr&#39;
+    </p>
+
+    <p>ie. &#39;grid-template-columns: 1fr 2fr 1fr;&#39;</p>
+
+    <p>
+      In the example above, columns 1 and 3 would be given 25% of the space each
+      and column 2 would be given 50% of the space.
+    </p>
+
+    <h4>minmax function</h4>
+
+    <p>Another function that is useful with grid is the minmax function.</p>
+
+    <p>You can specify any amount of columns and apply a minmax</p>
+
+    <p>ie. &#39;grid-template-columns: repeat(3, minmax(200px, 1fr));&#39;</p>
+
+    <p>
+      The column should be at least 200px, but can grow to take up the free
+      space if available. At 200px, the items would stop shrinking and start to
+      overflow.
+    </p>
+
+    <h3>grid-template-rows</h3>
+
+    <p>Specifies the number of rows in a grid.</p>
+
+    <p>
+      The values are basically the same as grid-template-rows, except now you
+      can designate the height of the rows instead of the width (column size)
+    </p>
+
+    <p>
+      ie. grid-template-rows: 100px 150px 200px; - three rows with their
+      corresponding heights.
+    </p>
+
+    <p>
+      ie. grid-template-rows: repeat(3, 100px) 200px; - three rows with a height
+      of 100px and one row with a height of 200px. In this example, the fourth
+      row ends up being blank space at the bottom that is occupied by the grid
+      container.
+    </p>
+
+    <h4>repeat() and minmax()</h4>
+
+    <p>
+      Like grid-template-columns, you can also specify a repeat function and a
+      minmax function for rows
+    </p>
+
+    <h3>grid-template</h3>
+
+    <p>A shorthand for defining Rows and Columns.</p>
+
+    <p>
+      It is specified by &#39;grid-template: grid-template rows /
+      grid-template-columns&#39;
+    </p>
+
+    <p>
+      ie. &#39;grid-template-columns: repeat(3, minmax(200px, 1fr));&#39;
+      &#39;grid-template-rows: repeat(3, 1fr);&#39;
+    </p>
+
+    <p>Becomes</p>
+
+    <p>
+      &#39;grid-template: repeat(3, 1fr) / repeat(3, minmax(200px, 1fr));&#39;
+    </p>
+
+    <h3>column-gap</h3>
+
+    <p>Sets the gap between the columns in the grid.</p>
+
+    <p>Values can be any non-negative value or a percentage</p>
+
+    <p>ie. &#39;column-gap: 20px;</p>
+
+    <h3>row-gap</h3>
+
+    <p>Sets the gap between the rows in the grid.</p>
+
+    <p>Values can be any non-negative value or a percentage</p>
+
+    <p>ie. &#39;row-gap: 20px;</p>
+
+    <h3>gap</h3>
+
+    <p>Shorthand for specifying the column-gap and the row-gap.</p>
+
+    <p>Values can be any non-negative value or a percentage</p>
+
+    <p>ie. &#39;gap: 20px 20px;&#39;</p>
+
+    <h3>justify-items</h3>
+
+    <p>
+      Aligns items within a container along the row axis. Applies to all items
+      within a container
+    </p>
+
+    <p>Possible Values:</p>
+
+    <ol>
+      <li>stretch - items will fill the cell</li>
+      <li>start - justifies items to the start of the cell</li>
+      <li>end - justifies items to the end of the cell</li>
+      <li>center - justifies items along the horizontal center</li>
+    </ol>
+
+    <p>The default value of justify-items is &#39;stretch&#39;</p>
+
+    <h3>align-items</h3>
+
+    <p>
+      Aligns items within a container along the vertical axis. Applies to all
+      items within a container
+    </p>
+
+    <p>Has a default value of &#39;stretch&#39;</p>
+
+    <p>Possible Values:</p>
+
+    <ol>
+      <li>stretch - items will fill the cell</li>
+      <li>start - justifies items to the start(top) of the cell</li>
+      <li>end - justifies items to the end(bottom) of the cell</li>
+      <li>center - justifies items along the vertical center</li>
+    </ol>
+
+    <h3>place-items</h3>
+
+    <p>
+      Shorthand for specifying align-items and justify-items. Applies to all
+      items within a container
+    </p>
+
+    <p>
+      Values can be any non-negative value or a percentage and any possible
+      combination of align and justify.
+    </p>
+
+    <p>
+      The first value is for align-items and the second value is for
+      justify-items
+    </p>
+
+    <p>
+      ie. &#39;place-items: start end;&#39; - item will be placed at the
+      start(top) of the cell and to the end(right) of the cell.
+    </p>
+
+    <p>
+      place-items can take a single value, in which case the value will be
+      applied to both align-items and justify-items.
+    </p>
+
+    <p>
+      ie. &#39;place-items: center&#39; will place items both horizontally and
+      vertically within the cell.
+    </p>
+
+    <h3>justify-content</h3>
+
+    <p>
+      Justifies content along the row axis (horizontal) with respect to the
+      container
+    </p>
+
+    <p>By default, justify-content is set to start.</p>
+
+    <p>Possible Values:</p>
+
+    <ol>
+      <li>justify-content: start; - places items at the horizontal start</li>
+      <li>justify-content: end; - places items at the horizontal end</li>
+      <li>justify-content: center; - centers items horizontally</li>
+      <li>justify-content: stretch; - stretches content along the row axis</li>
+      <li>
+        justify-content: space-between; - extra space is evenly split in between
+        grid columns, excluding the start and end
+      </li>
+      <li>
+        justify-content: space-around; - extra space is evenly distributed
+        between grid columns, and distribures half of the value to the start and
+        end
+      </li>
+      <li>
+        justify-content: space-evenly; - extra space is evenly and equally
+        distributed between the grid columns, including the start and end.
+      </li>
+    </ol>
+
+    <h3>align-content</h3>
+
+    <p>
+      Justifies content along the column axis (vertically) with respect to the
+      container
+    </p>
+
+    <p>By default, align-content is set to start.</p>
+
+    <p>Possible Values:</p>
+
+    <ol>
+      <li>align-content: start; - places items at the vertical start (top)</li>
+      <li>align-content: end; - places items at the vertical end (bottom)</li>
+      <li>align-content: center; - centers items vertically</li>
+      <li>align-content: stretch; - stretches content along the column axis</li>
+      <li>
+        align-content: space-between; - space is evenly distributed between the
+        rows
+      </li>
+      <li>
+        align-content: space-around; - adds space at the start and the end that
+        is equal to half of the space of the rows.
+      </li>
+      <li>
+        align-content: space-evenly; - adds equal space at the start, end, and
+        between the rows of the container
+      </li>
+    </ol>
+
+    <h3>place-content</h3>
+
+    <p>Shorthand for align-content and justify-content.</p>
+
+    <p>
+      The first value is for align-content and the second value is for
+      justify-content.
+    </p>
+
+    <p>
+      Values can be any possible combination of values for align and justify
+    </p>
+
+    <p>
+      ie. &#39;place-content: start end;&#39; - places content at the start(top)
+      of the container and to the end(right) of the container.
+    </p>
+
+    <p>
+      place-content can take a single value, in which case the value will be
+      applied to both align-content and justify-content.
+    </p>
+
+    <p>
+      ie. &#39;place-content: center&#39; will place the content both
+      horizontally and vertically within the container.
+    </p>
+
+    <h3>grid-auto-columns</h3>
+
+    <p>Sets the default width for columns within the grid</p>
+
+    <p>Values can be pixels, percentages, minmax, and auto(default), etc.</p>
+
+    <h3>grid-auto-rows</h3>
+
+    <p>Sets the default height for rows within the grid</p>
+
+    <p>Values can be pixels, percentages, minmax, and auto(default), etc.</p>
+
+    <h3>grid-auto-flow</h3>
+
+    <p>Controls how auto-placed items get inserted into the grid.</p>
+
+    <p>The default value is &#39;row&#39;</p>
+
+    <p>Potential Values:</p>
+
+    <ol>
+      <li>grid-auto-flow: row;</li>
+      <li>grid-auto-flow: column;</li>
+      <li>grid-auto-flow: dense;</li>
+      <li>grid-auto-flow: row dense;</li>
+      <li>grid-auto-flow: column dense</li>
+    </ol>
+
+    <h3>grid-template-areas</h3>
+
+    <p>Used to specifies areas within the grid layout</p>
+
+    <h3>grid</h3>
+
+    <p>
+      Shorthand for grid-template-rows, grid-template-columns,
+      grid-template-areas, grid-auto-rows, grid-auto-columns, and grid-auto-flow
+    </p>
+
+    <h2>Grid Item Properties</h2>
+
+    <ol>
+      <li>grid-column-start</li>
+      <li>grid-column end</li>
+      <li>grid-column</li>
+      <li>grid-row-start</li>
+      <li>grid-row-end</li>
+      <li>grid-row</li>
+      <li>justify-self</li>
+      <li>align-self</li>
+      <li>place-self</li>
+    </ol>
+
+    <h3>grid-column-start</h3>
+
+    <p>Controls on which grid column the content starts.</p>
+
+    <p>ie. grid-column-start: 1; - content begins on grid line 1</p>
+
+    <h3>grid-column-end</h3>
+
+    <p>Controls on which grid column the content ends</p>
+
+    <p>ie. grid-column-end: 3; - content ends on grid line 3</p>
+
+    <p>
+      You can also specify a span instead, meaning the column must span however
+      many columns you specify.
+    </p>
+
+    <p>ie. grid-column-end: span 2; - content spans 2 columns.</p>
+
+    <p>This is the same as telling it to end on grid line 3.</p>
+
+    <h3>grid-column</h3>
+
+    <p>Shorthand for grid-column-start and grid-column-end</p>
+
+    <p>
+      ie. grid-column: 1 / span 2; - content will begin on column 1 and span 2
+      columns
+    </p>
+
+    <h3>grid-row-start</h3>
+
+    <p>Controls on which grid row the content starts</p>
+
+    <p>ie. grid-row-start: 1;</p>
+
+    <h3>grid-row-end</h3>
+
+    <p>Controls on which grid row the content ends</p>
+
+    <p>ie. grid-row-end: 3;</p>
+
+    <p>
+      You can also specify a span instead, meaning the row must span however
+      many rows you specify.
+    </p>
+
+    <p>ie. grid-row-end: span 2; - content spans 2 rows.</p>
+
+    <h3>grid-row</h3>
+
+    <p>Shorthand for grid-row-start and grid-row-end</p>
+
+    <p>grid-row: 1 / span 2; - content will begin on row 1 and span 2 rows.</p>
+
+    <h3>justify-self</h3>
+
+    <p>
+      Deals with the horizontal alignment of a single item along the row axis
+    </p>
+
+    <p>By default, the value is &#39;stretch&#39;</p>
+
+    <p>Possible Values:</p>
+
+    <ol>
+      <li>justify-self: start;</li>
+      <li>justify-self: end;</li>
+      <li>justify-self: center;</li>
+      <li>justify-self: stretch;</li>
+    </ol>
+
+    <h3>align-self</h3>
+
+    <p>
+      Deals with the vertical alignment of a single item along the column axis
+    </p>
+
+    <p>By default, the value is &#39;stretch&#39;</p>
+
+    <p>Possible Values:</p>
+
+    <ol>
+      <li>justify-self: start;</li>
+      <li>justify-self: end;</li>
+      <li>justify-self: center;</li>
+      <li>justify-self: stretch;</li>
+    </ol>
+
+    <h3>place-self</h3>
+
+    <p>Shorthand for align-self and justify-self</p>
+
+    <p>By default, the values are &#39;place-self: stretch stretch&#39;</p>
+
+    <p>
+      ie. place-self: start end; - the item will be placed at the column
+      start(top) and the row end(right)
+    </p>
+
+    <p>
+      place-self can take a single value, in which case the value will be
+      applied to both align-self and justify-self.
+    </p>
+
+    <p>ie.</p>
+
+    <p>
+      place-self: center; - will center the item along the column and row axis.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css-crash-course/css.css" />
+    <title>CSS Crash Course</title>
+  </head>
+  <body>
+
+    <h1>CSS Crash Course</h1>
+
+    <p>The contents of this course are derived from the CSS Crash Course located on <a href="https://www.youtube.com/watch?v=Icf5D3fEKbM&list=PLC3y8-rFHvwhuX4qGvFx-wPy_MEi6Jdp7&index=2" target="_blank">The Codevolution YouTube Page.</a></p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Icf5D3fEKbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <p>While this is not a completely exhaustive list, what follows is an extensive list of topics to get beginners going. I found a lot of value in the crash courses when I was first beginning to code and took extensive notes as I followed along. So, in coder fashion, I made websites out of the content and depoyed them through <a href="https://app.netlify.com/" target="_blank">Netlify</a></p>
+
+    <p>You can find the GitHub Repo with all of the code <a href="https://github.com/justinTsugranes/css-crash-course" target="_blank">Here</a></p>
+    </div>
+
+    <hr>
+
+    <h2>There are three ways to add CSS</h2>
+    <ol>
+      <li>Inline Styles</li>
+      <li>Internal Stylesheets</li>
+      <li>External Stylesheets</li>
+    </ol>
+
+    <h2>CSS Syntax Rules</h2>
+
+    <p>
+      Inline styles and inline style sheets should be avoided on sites that
+      contain more than one page so I will not even include examples here. There
+      are also more advanced methods of selecting External style sheets are the
+      most efficient as you can keep all styles in a separate file, usually
+      styles.css, and then link the stylesheet in the head tag of the index.html
+      file.
+    </p>
+
+    <hr>
+
+    <h2>Selectors</h2>
+    <p>Syntax consists of a selector, and a style declaration consisting of a
+    property and a value. ie. h1 {color: orange} h1 is the selector, color is
+    the property and orange is the value.
+    </p>
+
+    <h3>Types of Selectors:</h3>
+
+    <h4>Element Selectors</h4>
+    <p>h1, h2, p, etc...</p>
+    <p>i. h1 { color: green}</p>
+
+    <h4>Universal Selector</h4>
+    <p>using the asterisk *, you can style every element.</p>
+    <p>ie. * {color: green}</p>
+
+    <h4>Class Selectors</h4>
+    <p>
+      Most common way. you can declare a class in the opening tag and reference
+      it on the style sheet.
+    </p>
+    <p class="error">ie: .error { color: red; }</p>
+    <p class="success">ie: .succes { color: green; }</p>
+
+    <h4>ID selector</h4>
+    <p>
+      similar to class selector, but only targets one specific element with that
+      ID. references using hashtag. ID selectors are great when you're also
+      using external style libraries.
+    </p>
+    <p id="test">ie: #test { color: maroon; }</p>
+
+    <hr>
+
+    <h3>Creating Color</h3>
+
+    <h4>Hex Values</h4>
+    <p id="hexvalue">#123456 <span id=hexvalue2>or #8c3d1c<span></span></p>
+
+    <h4>RGBA</h4>
+    <p>Specify Red, Green and Blue values and opacity.</p>
+    <p id="rgba">"color: rgba(50,100,34,0.5</p>
+
+    <h4>Background color</h4>
+    <div class="orange">Orange Background on a 'div'</div>
+    <span class="yellow">Yellow Background on a 'span'</span>
+
+    <hr>
+
+    <h2>Text Styling</h2>
+
+    <p></p>The default font on Chrome is Times New Roman. You can change font styles using 'font-family' on your css sheet</p>
+    <p class="font-styles1">Here's Verdana</p>
+    <p class="font-styles2">Here's Helvetica</p>
+    <p>To create a fall-back font, using a comma after you declare the font that you intend in the css styles sheet.</p>
+
+    <h4>Font Style</h4>
+    <p class="italic">Here is italic font created using the font-style: italic</p>
+
+    <h4>Font weight</h4>
+    <p class="bold">Here is bold font using font-weight: bold</p>
+
+    <h4>Font Decoration</h4>
+    <p class="underline">Here is underlined text using text-decoration: underline</p>
+
+    <h4>Font Size</h4>
+    <p class="font-size">Here is 20px text using font-size: 20px</p>
+
+    <h4>Using Multiples Styles At Once</h4>
+    <p class="multiplestyles">This text uses Helvetica, italic, bold, underline 20px.</p>
+    <hr>
+    <h2>Text Layout</h2>
+    <p class="aligncenter">This is centered text using text-align: center</p>
+    <p class="alignright">This is text-align: right</p>
+
+    <h4>Line Height</h4>
+    <p class="lineheight">Here is line-height: 4</p>
+
+    <h4>Letter Spacing</h4>
+    <p  class="letterspacing">Here is letter-spacing: 4px</p>
+
+    <h4>Word Spacing</h4>
+    <p  class="wordspacing">Here is word-spacing: 20px</p>
+
+    <hr>
+
+    <h2>Styling Lists</h2>
+
+    <ul class="ul1">
+      <li>This list has square dots instead of round dots</li>
+      <li>I changed it using list-style-style: square</li>
+      <li>You can use round, circle, square, or none</li>
+    </ul>
+
+    <ul class="ul2">
+      <li>This list original had default styling</li>
+      <li>but I set the list-style-type to none</li>
+      <li>and reformatted it using margin: 0 and padding: 0</li>
+      <li></li>
+    </ul>
+
+    <hr>
+
+    <h2>CSS Box Model</h2>
+
+    <p>The box model mainly revolves around three properties</p>
+    <ol>
+      <li>Order</li>
+      <li>Margin</li>
+      <li>Padding</li>
+    </ol>
+
+    <p>In web design, every element is considered a rectangular box</p>
+    <p>The CSS box model is sort of a standard by which browsers render HTML elements
+    </p>
+    <p>The box model consists of 4 parts</p>
+    <ul>
+      <li>Margin: The outermost layer and serves as white space between one box and others </li>
+      <li>Border: Wraps the content and any padding. It's size can be controlled using border and any other related properties</li>
+      <li>Padding: sits around the content as white space. It's size can be controlled using the padding and other related properties</li>
+      <li>Content: can be sized using propeties like width and height</li>
+    </ul>
+
+    <img src="/css-crash-course/images/box-model.jpg" width="550" height="300" alt="Box Model">
+
+    <div class="box-model">CSS Box Model</div>
+
+    <p>You can use the developer tools in your browser to inspect elements by clicking on 'Styles' once you are in the inspector.</p>
+    <img src="/css-crash-course/images/inspector.jpg" width="600" height="150" alt="Inspector">
+
+    <hr>
+
+    <h2 class="cascade">Cascade</h2>
+
+    <p>When two rules apply that have equal specifity, the one that comes last in the CSS is the one that will be used.</p>
+
+    <p>In the heading above, we targeted the class 'cascade', first coloring it red and next coloring it blue. Since blue is the color that was declared last, that is what style was applied</p>
+
+    <p>A big part of the above mentioned definition of cascade is equal specificity. A class selector is more specific than an element selector. An ID selector is more specific than a class selector. An inline-style is more specific than an ID selector.</p>
+
+    <p>When multiple style rules are applied to the same element, the browser will decide the most specific rule and apply that one.</p>
+
+    <p>You can override specificity by tagging something as important using '!important'. This method works, but it is kind of a last choice option for styling and there are more efficient ways to style.</p>
+    <p>ie. h3 { color: red !important}</p>
+
+    <hr>
+
+    <h2>Inheritance</h2>
+
+    <p>Some CSS propery values set on parent elements are inherited by their child elements, and some aren't</p>
+
+    <div class="inheritance">
+      <p>This paragraph tag inherited styles from the div tag that it is wrapped in.</p>
+    </div>
+
+    <hr>
+
+    <h2>Styling Tables</h2>
+
+    <p>To style this table, I targted the th and td tags and used 'border: 1px solid #ccc;' in the style sheet. Then, I targeted the 'table' tag and gave a border property of border-collapse: collapse;. To expand the width of the table, I set the width to 60%</p>
+
+      <p>To center align the table data, I set the td tag to text-align center. ie. td { text-align: center; }</p>
+
+      <p>You can change vertical alignment and the cell height by using 'height: 50px' and vertical-align: center.</p>
+
+      <p>To add spacing within the cells, you can add padding to td and th tags. I did this instead of altering the height and vertical alignment</p>
+
+      <p>To remove most of the borders, I changed border to only border-bottom</p>
+
+    <table>
+      <thead>
+          <tr>
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+            <th>Heading 3</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+          </tr>
+          <tr>
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+          </tr>
+      </tbody>
+    </table>
+
+      <hr>
+
+      <h2>CSS Layout Properties</h2>
+
+      <h4>Display Property</h4>
+
+      <p>The three main display values you should know as a beginner are block, inline and none.</p>
+
+      <div class="content-1">This is a div</div>
+      <span class="content-2">This is a span</span>
+      <div class="content-3">This content is hidden through a display:none</div>
+
+      <p>In this example, I used 'display' to change the div content into an inline element and the span content into a block element.</p>
+
+      <p>'display: none' is sometimes used in JavaScript in order to hide elements. </p>
+
+      <h4>Flex and Grid</h4>
+
+      <p>These topics are addressed in their corresponding Crash Course videos.</p>
+
+      <h4>Position Property</h4>
+
+      <p>There are five types of position properties</p>
+
+      <ol>
+        <li>Static - The default position setting</li>
+        <li>Relative - top, right, bottom, left</li>
+        <li>Fixed - Positions an element relative to the viewport</li>
+        <li>Absolute</li>
+        <li>Sticky</li>
+      </ol>
+
+      <h4>Relative Position</h4>
+      <p>Below, we set red and blue borders. By default, the position property on an element is set to static. With a static position, elements are placed according to the normal flow of the page. I changed the position of position content 1 to relative and then adjusted the top and bottom position. Position content 1 moved below position content 2. Content 2 stayed static and content 2 changed around it. </p>
+
+      <div class="position-1">Position content 1</div>
+      <div class="position-2">Position content 2</div>
+      <br>
+
+      <h4>Fixed Positioning</h4>
+
+      <p>In the example below, content 4 has a position of fixed, and has been placed in the bottom, right side of the viewport. Even when you scroll, the content stays fixed in that position.</p>
+
+      <div class="position-3">Position content 3</div>
+      <div class="position-4">Position content 4</div>
+      <br><br><br>
+
+      <h4>Absolute Positioning</h4>
+
+      <p>If you use an absolute positioning, content behaves differently from content with the fixed position. The content is fixed to the bottom right of the screen, but stays in that location on the page while you scroll. However, if the element has a different parent element with a relative position, the position will then be relative to that parent element.</p>
+      <p>
+        I wrapped the second element with a div tag and added a class of container. Then, I added a a css styles for the container class. The content is fixed to the bottom right of the container, since it is enclosed in the container div, which is its parent element.
+      </p>
+
+      <div class="position-5">Position content 5</div>
+      <div class="container">
+      <div class="position-6">Position content 6</div>
+      </div>
+      <br><br><br>
+
+      <h4>Sticky Positioning</h4>
+
+      <p>Sticky positioning is based on the user's scroll position.</p>
+
+      <div class="position-7">Position content 7</div>
+      <br>
+
+      <p>You can see that once you reach the content, the position of the content moves with the scroll </p>
+      <p>Beyond an offset, it just sticks in one place.</p>
+      <p>This is great if you have something on the webpage that you want to be in the normal layout of the page and always visible.</p>
+
+      <hr>
+
+      <h2>CSS Units</h2>
+
+      <h4>Absolute Units</h4>
+        
+      <p>Absolute Units are generally considered to always be the same size. There are several, but pixel is the most common. Absolute units are useful for layouts where the page needs to be printed.</p>
+
+      <img src="/css-crash-course/images/absolute-units.jpg" width="500" height="250" alt="CSS Units">
+
+      <h4>Relative Units</h4>
+
+      <p>Relative Units are relative to something else, perhaps the size of the parent element's font, or the size of the viewport. The benefit is that, with some careful planning, you can make it so that the size of the text or elements scales relatively with other elements on the page.</p>
+
+      <img src="/css-crash-course/images/relative-units.jpg" width="500" height="250" alt="CSS Units">
+      <br><br>
+
+      <div class="emcontainer">
+        <p>I set the font-size of this text to 20px and the height to 2em. In this example, 1em is equal to the font size of the element. So, the height is actually 40px.</p>
+        <div class="em-child">
+          <p>Em can also be used on font-size of a child element. So, I've added another div tag within this current parent div and gave it a class of 'em-child'. This is text in the em-child div with a font-size of 3em, meaning it has a size of 60px (the font-size set in the parent, em-container div.)</p>
+        </div>
+      </div>
+
+      <h4>Rem Units</h4>
+
+      <p>Rem is sized relative to the Root Element</p>
+
+      <div class="rem1">This font is set to 2rem. The body of the document is set to 16px by default, so 2rem means this text is 32px.</div>
+      <div class="rem2">This is 3rem - 48px</div>
+
+      <h4>Viewport Height: VH</h4>
+
+      <p class="vh">This is VH text enclosed in a 1px border that is set to height: 50vh, meaning it will take up 50% of the viewport height.</p>
+
+      <h4>Viewport Width: VW</h4>
+
+      <p class="vw">Works similarly to VH, but on the width of an element. This text has a width: 50vw and a height: 50vh, meaning it takes up 50% of the width and 50% of the height of the viewport. </p>
+
+      <hr>
+
+      <h2>Math Functions That Can Be Used As Property Values</h2>
+
+      <h4>Calc Function</h4>
+
+      <p class="math-function">This text is formatted with a 'height: calc(50vh-100px)'</p>
+      <p>This is useful for when you have to subtract the navbar height for calculating the available height for your content.</p>
+
+      <h4>Max Function</h4>
+      <p class="max-function">Uses the largest value from a comma-separated list of values.This text is formatted with a 'height: max(50vh, 600px)'. The height is 600px, as that is the larger of the two values</p>
+
+      <h4>Min Function</h4>
+      <p class="min-function">Uses the smallest value from a comma-separated list of valuesThis text is formatted with a ' height: min(50vh, 600px);'. The height is 50vh, as that is the smaller of the two values</p>
+
+  </body>
+</html>

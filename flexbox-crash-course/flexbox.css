@@ -1,0 +1,73 @@
+body {
+  margin: 20px;
+}
+
+.container {
+  border: 6px solid black;
+  display: flex;
+  height: 800px;
+  // flex-direction: column;
+  // flex-wrap: wrap;
+  // flex-flow: column wrap;
+  // column-gap: 20px;
+  // row-gap: 20px;
+  // justify-content: space-evenly;
+  // align-items: center;
+  // align-content: stretch;
+}
+
+.flex-item {
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 6rem;
+  text-align: center;
+  // flex-grow: 1;
+  // flex-shrink: 0;
+}
+
+.item-1 {
+  background-color: #b4bf35;
+  // flex-grow: 2;
+  // flex-shrink: 5;
+  // flex-basis: 200;
+  // You can shorthand the above properties by the simple flex property below.
+  flex: 2 5 200px;
+  align-self: flex-start;
+}
+
+.item-2 {
+  background-color: #b95f21;
+  align-self: flex-end;
+}
+
+.item-3 {
+  background-color: #1c4c56;
+  // order: 1;
+  align-self: center;
+}
+
+.item-4 {
+  background-color: #cfb276;
+  align-self: stretch;
+}
+
+.item-5 {
+  background-color: #6b0803;
+}
+
+.item-6 {
+  background-color: #1c4c56;
+}
+
+.item-7 {
+  background-color: #b95f21;
+}
+
+.item-8 {
+  background-color: #01243a;
+}
+
+.item-9 {
+  background-color: #aad041;
+}

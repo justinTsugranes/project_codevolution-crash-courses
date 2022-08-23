@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Crash Course</title>
+  </head>
+  <body>
+    <h1>JavaScript Crash Course</h1>
+
+    <p>
+      The contents of this course are derived from the JavaScript Crash Course
+      located on
+      <a href="https://www.youtube.com/watch?v=XIOLqoPHCJ4" target="_blank"
+        >The Codevolution YouTube Page.</a
+      >
+    </p>
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/XIOLqoPHCJ4"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <p>
+      While this is not a completely exhaustive list, what follows is an
+      extensive list of topics to get beginners going. I found a lot of value in
+      the crash courses when I was first beginning to code and took extensive
+      notes as I followed along. So, in coder fashion, I made websites out of
+      the content and deployed them through
+      <a href="https://app.netlify.com/" target="_blank">Netlify</a>
+    </p>
+
+    <p>
+      You can find the GitHub Repo with all of the code
+      <a
+        href="https://github.com/justinTsugranes/javascript-crash-course"
+        target="_blank"
+        >Here.</a
+      >
+    </p>
+
+    <hr />
+
+    <h2>Primitives</h2>
+
+    <p>string number boolean undefined null bigint symbol</p>
+
+    <h2>Non-primitves</h2>
+
+    <p>objects</p>
+
+    <h2>Operators</h2>
+
+    <ul>
+      <li>Assignment</li>
+      <li>Arithmetic</li>
+      <li>Comparison</li>
+      <li>Logical</li>
+      <li>String</li>
+      <li>Other</li>
+    </ul>
+
+    <h2>Type Conversions</h2>
+
+    <h2>Equality</h2>
+
+    <p>==</p>
+
+    <p>strict ===</p>
+
+    <h2>Conditional Statements</h2>
+
+    <p>if else else if switch</p>
+
+    <h2>Loops</h2>
+
+    <h3>For Loops</h3>
+
+    <p>for (initializer; condition; final-expression) { //code to run }</p>
+
+    <p>
+      ex. for(let i = 1; 1 &lt;=5; i++) { console.log(&#39;Iteration number
+      &#39; + i) }
+    </p>
+
+    <h3>While Loops</h3>
+
+    <p>Same execution as For loops</p>
+
+    <ul>
+      <li>variable is set</li>
+      <li>condition is evaluated</li>
+      <li>code is run while the condition is true</li>
+      <li>code is terminated once the condition is false</li>
+    </ul>
+
+    <p>initializer while (condition) { //code to run final-expression }</p>
+
+    <p>
+      ex. let i = 1 while(i &lt;=5&gt;){ console.log(&#39;Iteration number &#39;
+      + i) i++ }
+    </p>
+
+    <h3>Do..While loop</h3>
+
+    <p>Executes the code block once and then evaluates the condition</p>
+
+    <p>initializer do { //code to run final-expression } while (condition)</p>
+
+    <p>
+      ex. let i = 6 do { console.log(&#39;Iteration number &#39; + 1) i++ }
+      while(i &lt;=5)
+    </p>
+
+    <p>
+      // since 6 is greater than 5, the loop is exectuted once and then
+      terminated
+    </p>
+
+    <h3>For..of Loop</h3>
+
+    <p>Used to loop over a collection of data, like looping over an array</p>
+
+    <p>for (const item of array) { //code to run }</p>
+
+    <p>ex. const numArray = [1,2,3,4,5]</p>
+
+    <p>
+      for (const num of numArray){ console.log(&#39;Iteration of number &#39; +
+      num) }
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          automatically iterates of array, and in each iteration, assigns the
+          value of the element as num. ie. in the first iteration num = 1, first
+          iteration num = 2, etc...
+        </p>
+      </li>
+      <li>
+        <p>
+          best suited for a collection of data since it abstracts away two
+          things.
+        </p>
+        <ul>
+          <li>
+            <p>
+              1. you don&#39;t have tp keep track of a variable ot increment the
+              iteration count.
+            </p>
+          </li>
+          <li>
+            2. you don&#39;t have to figure out how to access the item in the
+            collection
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Functions</h2>
+
+    <p>
+      A JavaScript function is a block of code designed to perform a particular
+      task. ie, add two numbers, multiply two numbers, etc...
+    </p>
+
+    <p>
+      Functions are reusable as they can be defined once and can be called with
+      different values, resulting in different results
+    </p>
+
+    <p>
+      Functions help divide a complex problem into smaller chunks and makes your
+      program easy to understand and maintain
+    </p>
+
+    <p>
+      ex. function name (parameter1, parameter2, paramter3) { //code to be
+      executed } name(argument)
+    </p>
+
+    <p>
+      ex. function greet(username) { console.log(&#39;Good morning &#39; +
+      username) } greet(&#39;Bruce&#39;)
+    </p>
+
+    <p>
+      ex. function add(a,b){ return a + b } const sum = add(5,10)
+      console.log(sum)
+    </p>
+
+    <p>
+      a + b are two input paramters. in the function body, we add the two
+      paramters and return the sum of the two parameters.
+    </p>
+
+    <h3>Arrow Functions</h3>
+
+    <p>Give you a more precise syntax</p>
+
+    <p>
+      const arrowSum = (a,b) =&gt; { return a + b } const sum = arrowSum(25,25)
+      console.log(sum)
+    </p>
+
+    <p>
+      // since we just have a single return statement, we can ommit the curly
+      braces and the return statement and inline the return statement on the
+      same line. The new function looks like:
+    </p>
+
+    <p>
+      const arrowSum = (a, b) =&gt; a + b const sum = arrowSum(25, 25)
+      console.log(sum)
+    </p>
+
+    <p>
+      // if you just have one argument, you can ommit the parathesis around the
+      argument
+    </p>
+
+    <p>ex. const addFive = num =&gt; num + 5</p>
+
+    <h2>Scope</h2>
+
+    <p>Scope determines the accessibility or visibility of variables</p>
+
+    <p>There are Three types of Scope</p>
+
+    <ol>
+      <li>Block Scope</li>
+      <li>Function Scope</li>
+      <li>Global Scope</li>
+    </ol>
+
+    <h3>Block Scope</h3>
+
+    <p>
+      Dictates that variables declared inside a set of curly braces cannnot be
+      accessed outside the curly braces
+    </p>
+
+    <h3>Function Scope</h3>
+
+    <p>
+      Variables declared inside a function are not accessible from outside the
+      function
+    </p>
+
+    <h3>Global Scope</h3>
+
+    <p>
+      The scope outside any block or function. A global scoped variable is
+      accessible both inside a block and inside a function
+    </p>
+
+    <script src="/javascript-crash-course/script.js"></script>
+  </body>
+</html>
