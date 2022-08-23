@@ -26,7 +26,7 @@ The contents of this course are derived from the CSS Flexbox Crash Course locate
 50:37 flex\
 52:05 align-self\
 
-I found a lot of value in the crash courses when I was first beginning to code and took extensive notes as I followed along. So, in coder fashion, I made websites out of the content and depoyed them through [Netlify](https://app.netlify.com/). Link to the live site is located [Here](https://my-flexbox-crash-course.netlify.app/).
+I found a lot of value in the crash courses when I was first beginning to code and took extensive notes as I followed along. So, in coder fashion, I made websites out of the content and depoyed them through [Netlify](https://app.netlify.com/).
 
 I highly recommend checking out all of the Codevolution videos. Links to all of the crash courses are below. In addition, he has extensive videos on React.js, Next.js, Node.js, MongoDB, and more.
 

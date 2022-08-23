@@ -1,12 +1,14 @@
 # CSS Grid Crash Course
 
-The contents of this website are derived from the Crash Course Videos located on The Codevolution YouTube Page: [CSS Grid Crash Course](https://www.youtube.com/c/Codevolution)
+The contents of this website are derived from the Crash Course Videos located on [The Codevolution YouTube Page](https://www.youtube.com/c/Codevolution).
 
-I found a lot of value in the crash courses when I was first beginning to code and took extensive notes as I followed along. Vishwas is a great teacher and breaks complex down very well. So, in coder fashion, I made websites out of the content and depoyed them through [Netlify](https://app.netlify.com/). Link to the live site is located [Here]().
+I found a lot of value in the crash courses when I was first beginning to code and took extensive notes as I followed along. Vishwas is a great teacher and breaks complex down very well. So, in coder fashion, I made websites out of the content and depoyed them through [Netlify](https://app.netlify.com/).
+
+## Link to the live site is located [Here](https://coding-crash-courses.netlify.app/)
 
 I highly recommend checking out all of the Codevolution videos. Links to all of the crash courses are below. In addition, the channel has extensive videos on React.js, Next.js, Node.js, MongoDB, and more.
 
-### [The Codevolution Channel](https://www.youtube.com/c/Codevolution)
+## [The Codevolution Channel](https://www.youtube.com/c/Codevolution)
 
 ### Crash Course Videos
 

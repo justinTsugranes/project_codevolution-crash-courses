@@ -19,7 +19,7 @@ This course is a contination of the JavaScript Fundmamentals Crash Course. The c
 57:11 Generators\
 01:03:20 Frontend Interview Course\
 
-I found a lot of value in the crash courses when I was first beginning to code and took extensive notes as I followed along. So, in coder fashion, I made websites out of the content and depoyed them through [Netlify](https://app.netlify.com/). Link to the live site is located [Here]().
+I found a lot of value in the crash courses when I was first beginning to code and took extensive notes as I followed along. So, in coder fashion, I made websites out of the content and depoyed them through [Netlify](https://app.netlify.com/).
 
 I highly recommend checking out all of the Codevolution videos. Links to all of the crash courses are below. In addition, he has extensive videos on React.js, Next.js, Node.js, MongoDB, and more.
 
