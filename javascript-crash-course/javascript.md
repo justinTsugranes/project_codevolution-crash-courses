@@ -1,6 +1,6 @@
-# JavaScript Crash CourseNotes
+# JavaScript Crash Course Notes
 
-The contents of this course are derived from the CSS Flexbox Crash Course located on The Codevolution YouTube Page: [JavaScript Crash Course](https://www.youtube.com/watch?v=XIOLqoPHCJ4&list=PLC3y8-rFHvwhuX4qGvFx-wPy_MEi6Jdp7&index=5)
+The contents of this course are derived from the JavaScript Crash Course located on The Codevolution YouTube Page: [JavaScript Crash Course](https://www.youtube.com/watch?v=XIOLqoPHCJ4&list=PLC3y8-rFHvwhuX4qGvFx-wPy_MEi6Jdp7&index=5)
 
 ## Timestamps
 
