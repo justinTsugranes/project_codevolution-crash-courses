@@ -1,12 +1,15 @@
-# Notes
+# Notes That Aren't Added to HTML Yet
 
-In its most basic form, JavaScript is a synchronous, blocking, single-threaded lanauge.
+#### setInterval()
 
-Synchronous
+The setInterval() function repeatedly runs the ame code over and over again at regular intervals.
 
-- Code executes from the top down, with only one line executing at any given time.
+**setInterval Image 1**
 
-Blocking
+Parameters that the setInterval() function accepts:
 
-- No matter how long a previous previous takes, the subsequent processes won't begin until the former is completed.
-- If function A has to execute an intensive chunk of code, JavaScript has to finish that function before moving on to function B, regardless of the time it takes to complete.
+- The first parameter is the code to execute
+- The second paamter is the duration in milliseconds
+- After the second parameter, you can pass in zero or more values that represent any paramters you want to pass to the function when it is run
+
+**setInterval Image 2**

@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A series of crash courses about HTML, CSS, JavaScript, and React based on content from Codevolution" />
+    <meta name="author" content="Coding Crash Courses" />
     <title>Asynchronous JavaScript Crash Course</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/async-javascript-crash-course/styles/async_javascript.css" />
   </head>
   <body>
@@ -20,6 +23,163 @@
     </div>
 
     <hr>
+    <br>
+
+<p>
+  In its most basic form, JavaScript is a synchronous, blocking, single-threaded
+  lanauge.
+</p>
+
+<h2>Synchronous</h2>
+
+<p>
+  Meaning...code executes from the top down, with only one line executing at any
+  given time.
+</p>
+
+<h2>Blocking</h2>
+
+<ul>
+  <li>
+    No matter how long a previous previous takes, the subsequent processes
+    won&#39;t begin until the former is completed.
+  </li>
+  <li>
+    If function A has to execute an intensive chunk of code, JavaScript has to
+    finish that function before moving on to function B, regardless of the time
+    it takes to complete.
+  </li>
+  <li>
+    Web app runs in a browser and it executes an intesive chunk of code without
+    returning control to the browser. The browser appears to be frozen.
+  </li>
+</ul>
+
+<h2>Single-threaded</h2>
+
+<ul>
+  <li>
+    A thread is simply a process that your javascript program ca use to run a
+    task
+  </li>
+  <li>Each thread can only do one task at a time</li>
+  <li>
+    JavaScript has just one thread called the main thread for executing any
+    code.
+  </li>
+</ul>
+
+<h2>Asynchronous JavaScript</h2>
+
+<p>JavaScript alone is not enough</p>
+
+<p>
+  We need new aspects which are outside of JavaScript to help us write
+  asynchronous code, which is where web browsers come into play.
+</p>
+
+<p>
+  Web browsers define functions and APIs that allow us to register functions
+  that should not be executed synchronously, and hsould instead be invoked
+  asynchronously when some kind of even occurs
+</p>
+
+<p>
+  For example. that could be the passage of time (setTimeout or setInterval),
+  the user&#39;s interaction wiht the mouse (addEventListener), or the arrival
+  of data over the network (callbacks, Promises, async-await)
+</p>
+
+<p>
+  You can let your code do several things at the same time without stopping or
+  blocking your main thread.
+</p>
+
+<h3>Timeouts And Intervals</h3>
+
+<p>
+  These are the traditional methods that JavaScript has available for running
+  code asynchronously
+</p>
+
+<ul>
+  <li>setTimeout()</li>
+  <li>setInterval()</li>
+</ul>
+
+<h4>setTimeout()</h4>
+
+<p>
+  The setTimeout() function executes a particular block of code once after a
+  specified time has elapsed.
+</p>
+
+<p>Parameters that the setTimeout() function accepts:</p>
+
+<ul>
+  <li>
+    The first paramter is a function to run, or a refernce to a function defined
+    elsewhere
+  </li>
+  <li>
+    The second paramter is a number representing the duration in milliseconds to
+    wait before executing the code
+  </li>
+  <li>
+    After the second paramter, you can pass in zero or more values that
+    represent any paramters you want to pass to the function when it runs.
+  </li>
+</ul>
+
+<img src="/async-javascript-crash-course/images/setTimeout.jpg" alt="setTimeout" height="300" width="500">
+
+<h5>Clearing timeouts</h5>
+
+<p>Sometimes you may want to cancel or clear a timeout.</p>
+
+<p>
+  To clear a timeout, you can use the clearTimeOut() method, passing in the
+  identifier returned by setTimeout as a parameter.
+</p>
+
+<img src="/async-javascript-crash-course/images/clearTimeout.jpg" alt="clearTimeout" height="250" width="450">
+
+<p>
+  In the image above, you can see that we assigned the return value from
+  setTimeout to a constant called timeoutId. On line 6, we pass thatId into the
+  clearTimeout method, which will basically ensure our grid function will not
+  run after the two second duration. So, nothing is logged to the console as the
+  grid function never executes.
+</p>
+
+<p>
+  A more practical sceario is clearing timeouts when the component is unmounting
+  to free up the resources and also prevent the code from incorrectly executing
+  on an unmounted component.
+</p>
+
+<h4>setInterval()</h4>
+
+<p>
+  The setInterval() function repeatedly runs the ame code over and over again at
+  regular intervals.
+</p>
+
+<img src="/async-javascript-crash-course/images/setInterval.1.jpg" alt="setInterval" height="75" width="400">
+
+<p>Parameters that the setInterval() function accepts:</p>
+
+<ul>
+  <li>The first parameter is the code to execute</li>
+  <li>The second paamter is the duration in milliseconds</li>
+  <li>
+    After the second parameter, you can pass in zero or more values that
+    represent any paramters you want to pass to the function when it is run
+  </li>
+</ul>
+
+<img src="/async-javascript-crash-course/images/setInterval.2.jpg" alt="setInterval" height="150" width="400">
+
 
     <script src="js/scripts.js"></script>
   </body>
