@@ -1,4 +1,4 @@
-# CSS Grid Crash Course
+# Codevolution Crash Course Notes
 
 The contents of this website are derived from the Crash Course Videos located on [The Codevolution YouTube Page](https://www.youtube.com/c/Codevolution).
 
