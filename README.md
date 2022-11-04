@@ -1,5 +1,7 @@
 # Codevolution Crash Course Notes
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/987775b4-479e-426a-9227-d8b9e2073bdd/deploy-status)](https://app.netlify.com/sites/justin-tsugranes-coding-crash-courses/deploys)
+
 The contents of this website are derived from the Crash Course Videos located on [The Codevolution YouTube Page](https://www.youtube.com/c/Codevolution).
 
 I found a lot of value in the crash courses when I was first beginning to code and took extensive notes as I followed along. Vishwas is a great teacher and breaks complex down very well. So, in coder fashion, I made websites out of the content and depoyed them through [Netlify](https://app.netlify.com/).
