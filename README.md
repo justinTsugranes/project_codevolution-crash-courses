@@ -48,6 +48,8 @@ I found a lot of value in the crash courses when I was first beginning to code a
 
 [![Project Screen Shot][project-screenshot]][project-url] [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url]
 
+The Crash Courses project is a website that I developed to consolidate my notes from a variety of coding crash courses that I completed on the Codevolution YouTube channel. These courses covered a range of topics, including HTML, CSS, Flexbox, Grid, and JavaScript. I used JavaScript, HTML, and CSS to create the website, which was then deployed on Netlify. The website serves as a reference resource for me to quickly access the key concepts and techniques that I learned from the crash courses, and also serves as a portfolio piece to showcase my skills in web development.
+
 I highly recommend checking out all of the Codevolution videos. Links to all of the crash courses are below. In addition, the channel has extensive videos on React.js, Next.js, Node.js, MongoDB, and more.
 
 ## [The Codevolution Channel](https://www.youtube.com/c/Codevolution)
